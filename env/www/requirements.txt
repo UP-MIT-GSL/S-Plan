@@ -1,4 +1,0 @@
-Django == 1.4
-PIL
-django-endless-pagination
-django-imagekit
