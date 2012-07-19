@@ -15,26 +15,26 @@ class UserAccount(models.Model):
     webmail = models.CharField(max_length=100)
     def __unicode__(self):
         return "%s"%username
-class Notes(models.Model):
+class Note(models.Model):
     note = models.CharField(max_length=50)
     body = models.CharField(max_length=5000)
     start= models.DateField(auto_now_add = True)
     end= models.DateField()
     def __unicode__(self):
         return "%s"%note
-class Tasks(models.Model):
-    event= models.ForeignKey(Notes, related_name="Task")
+class Task(models.Model):
+    event= models.ForeignKey(Note, related_name="Task")
     subject = models.CharField(max_length=50)
     def __unicode__(self):
         return "%s"%task
 class Event(models.Model):
-    event= models.ForeignKey(Notes, related_name="Event")
+    event= models.ForeignKey(Note, related_name="Event")
     time = models.TimeField()
     venue = models.CharField(max_length=150)
     def __unicode__(self):
         return "%s"%event
 class Reminder(models.Model):
-    reminder= models.ForeignKey(Notes, related_name="Reminder")
+    reminder= models.ForeignKey(Note, related_name="Reminder")
     def __unicode__(self):
         return "%s"%reminder
 
