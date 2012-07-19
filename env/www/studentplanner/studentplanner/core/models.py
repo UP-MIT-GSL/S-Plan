@@ -23,18 +23,22 @@ class Note(models.Model):
     def __unicode__(self):
         return "%s"%note
 class Task(models.Model):
-    event= models.ForeignKey(Note, related_name="Task")
+    task= models.CharField(max_length=50)
+    isDone= models.BooleanField()
+    end= models.DateField()
     subject = models.CharField(max_length=50)
     def __unicode__(self):
         return "%s"%task
 class Event(models.Model):
-    event= models.ForeignKey(Note, related_name="Event")
+    event= models.CharField(max_length=100)
     time = models.TimeField()
+    end= models.DateField()
     venue = models.CharField(max_length=150)
     def __unicode__(self):
         return "%s"%event
 class Reminder(models.Model):
-    reminder= models.ForeignKey(Note, related_name="Reminder")
+    reminder= models.CharField(max_length=50)
+    occurence = models.DateField()
     def __unicode__(self):
         return "%s"%reminder
 
