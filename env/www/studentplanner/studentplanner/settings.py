@@ -1,6 +1,6 @@
 # Django settings for studentplanner project.
 import os
-
+import dj_database_url
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 DEBUG = True
