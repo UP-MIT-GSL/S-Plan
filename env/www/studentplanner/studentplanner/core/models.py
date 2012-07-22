@@ -8,9 +8,22 @@ class Event(models.Model):
     def __unicode__(self):
         return "%s"%event
 class OrgAccount(models.Model):
+    ORG_TYPES = (
+        ('Acad','Academic'), 
+        ('All','Alliance'), 
+        ('CO','Cause-Oriented'), 
+        ('CS','Community Service'), 
+        ('Frat','Fraternity'),
+        ('RP','Regional/Provincial'),
+        ('Rel','Religious'),
+        ('Soro','Sorority'),
+        ('SI','Special Interest'),
+        ('SR','Sports and Recreation'),
+    )
     orgname = models.ForeignKey(User, related_name= 'Orgname')
     orgHead = models.CharField(max_length=50)
     orgAdd = models.CharField(max_length=150)
+    orgType= models.CharField(max_length=100, choices=ORG_TYPES)
     members= models.ManyToManyField(User, related_name = 'Member')
     events=models.ManyToManyField(Event, related_name='Event')
     def __unicode__(self):
