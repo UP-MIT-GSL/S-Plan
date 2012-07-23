@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-container">
+  <div class="container1">
+   <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="index.html">Home</a></li>
+      <li>&#187;</li>
+      <li><a href="events.html">Notes List</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="reminders.html">Reminders</a></li>
+    </ul>
+</div>
+<br />
+<br />
+	<!-- filter option? i.e. by org, by order -->
+    <div class="box">
+      <div class="block"><h2>Reminders</h2>
+		<ul id="list">
+        {% for rem in rem_list %}
+			<li>{{ rem }} </li>
+		{% endfor %}
+		</ul>
+      </div>
+      
+      <div class="clear"></div>
+
+<br />
+    </div>
+    
+ 
+ </div>
+<div class="main-container">
+ </div>
+ 
+<div class="callout"> 
+    <div class="calloutcontainer"> 
+        <div class="container_12"> 
+            <div class="grid"> 
+				<br /><br /><br /><br />
+				<a href="addNote.html" class="more" target="_blank">Add Reminder</a>
+            <div class="clear"></div> 
+        </div> 
+        <div class="calloutoverlay"></div> 
+        <div class="calloutoverlaybottom"></div> 
+    </div> 
+</div> </div> 
+{% endblock %}
