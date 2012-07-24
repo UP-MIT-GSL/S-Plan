@@ -2,15 +2,6 @@
 {% block content %}
 <div class="main-container">
   <div class="container1">
-   <div id="breadcrumb">
-    <ul>
-      <li class="first">You Are Here</li>
-      <li>&#187;</li>
-      <li><a href="user_home.html">Home</a></li>
-      <li>&#187;</li>
-      <li class="current"><a href="addNote.html">Add Note</a></li>
-    </ul>
-</div>
 <br />
 <br />
 
@@ -27,9 +18,10 @@
    <br />
 			<p>
 			<label for="noteType"><h4>Note Type: </h4></label>
-			<input type="radio" name="noteType" value="event" /> Event<br />
-			<input type="radio" name="noteType" value="task" /> Task<br />
-			<input type="radio" name="noteType" value="reminder" /> Reminder<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="event" /><h6 style="display: inline;"> Event</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="task" /><h6 style="display: inline;"> Task</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="reminder" /><h6 style="display: inline;"> Reminder</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="plainNote" /><h6 style="display: inline;"> Other</h6><br />
 			</p><br />
             <p>
               <label for="name"><h4>Title (required)</h4></label>
