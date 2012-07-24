@@ -9,7 +9,7 @@
 <body>
 <div class="main-container">
   <header>
-    <h1><a href="index.html">Planner</a></h1>
+    <h1><a href="{% url home %}">Planner</a></h1>
     <p id="tagline"><strong>Your Very Own Digital Planner</strong></p>
   </header>
 </div>
@@ -32,17 +32,17 @@
   <div id="nav-container">
    <nav> 
     <ul class="nav">
-      <li class="active"><a href="user_home.html">Home</a></li>
-      <li><a href="typo.html">Calendar</a></li>
-      <li><a href="events.html">Notes List</a>
+      <li class="active"><a href="{% url home %}">Home</a></li>
+      <li><a href="{% url home %}">Calendar</a></li>
+      <li><a href="{% url note %}">Notes List</a>
         <ul>
-          <li><a href="events.html">Events</a>
-          <li><a href="tasks.html">Tasks</a></li>
-		  <li><a href="reminders.html">Reminders</a></li>
+          <li><a href="{% url event %}">Events</a>
+          <li><a href="{% url task %}">Tasks</a></li>
+		  <li><a href="{% url reminder %}">Reminders</a></li>
         </ul>
       </li>
-      <li><a href="profile.html">Profile</a></li>
-      <li class="last"><a href="contact.php">Contact</a></li>
+      <li><a href="{% url profile %}">Profile</a></li>
+      <li class="last"><a href="{% url contact %}">Contact</a></li>
     </ul>
    </nav> 
     <div class="clear"></div>
