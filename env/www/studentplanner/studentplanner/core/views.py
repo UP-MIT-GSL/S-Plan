@@ -63,7 +63,7 @@ def show_notes(request):
     else:
         return HttpResponseRedirect()
 def show_reminders(request):
-        if request.user.is_authenticated() == True:
+    if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username__exact = request.session['username'])
         reminder_list = Reminder.objects.filter(owner = tempUser)
     else:

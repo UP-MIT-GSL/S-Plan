@@ -17,7 +17,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^$', TemplateView.as_view(template_name="login.html"), name="login"),
+    url(r'^$', TemplateView.as_view(template_name="login.html"), name="login"),
     url(r'^profile/$', TemplateView.as_view(template_name="profile.html"), name="profile"),
     #url(r'^logout/$', TemplateView.as_view(template_name="logout.html"), name="logout"),
     url(r'^calendar/$', TemplateView.as_view(template_name="calendar.html"), name="calendar"),
