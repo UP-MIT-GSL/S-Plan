@@ -6,7 +6,7 @@
 	padding: 58px 76px 0 76px;
 	color: #ebebeb;
 	font: 12px Arial, Helvetica, sans-serif;
-	background: url( {{ STATIC_URL }} images/login-box-backg.png) no-repeat left top;
+	background: url(images/login-box-backg.png) no-repeat left top;
 }
 
 #login-box img {
