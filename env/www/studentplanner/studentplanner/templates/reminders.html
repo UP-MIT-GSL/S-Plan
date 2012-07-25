@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-container">
+  <div class="container1">
+   
+<br />
+<br />
+	<!-- filter option? i.e. by org, by order -->
+    <div class="box">
+      <div class="block"><h2>Reminders</h2>
+		<ul id="list">
+        {% for rem in rem_list %}
+			<li>{{ rem }} </li>
+		{% endfor %}
+		</ul>
+      </div>
+      
+      <div class="clear"></div>
+
+<br />
+    </div>
+    
+ 
+ </div>
+<div class="main-container">
+ </div>
+ 
+<div class="callout"> 
+    <div class="calloutcontainer"> 
+        <div class="container_12"> 
+            <div class="grid"> 
+				<br /><br /><br /><br />
+				<a href="addNote.html" class="more" target="_blank">Add Reminder</a>
+            <div class="clear"></div> 
+        </div> 
+        <div class="calloutoverlay"></div> 
+        <div class="calloutoverlaybottom"></div> 
+    </div> 
+</div> </div> 
+{% endblock %}

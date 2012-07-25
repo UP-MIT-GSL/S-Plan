@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-container">
+  <div class="container1">
+<br />
+<br />
+
+    <div class="box">
+           <div class="content">
+        <h1>Add New Note</h1>
+<form action="#" method="post">
+<noscript>
+		<p><input type="hidden" name="nojs" id="nojs" /></p>
+</noscript>
+
+
+
+   <br />
+			<p>
+			<label for="noteType"><h4>Note Type: </h4></label>
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="event" /><h6 style="display: inline;"> Event</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="task" /><h6 style="display: inline;"> Task</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="reminder" /><h6 style="display: inline;"> Reminder</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="plainNote" /><h6 style="display: inline;"> Other</h6><br />
+			</p><br />
+            <p>
+              <label for="name"><h4>Title (required)</h4></label>
+              <input type="text" name="name" id="name" value="" size="22" />
+            </p>
+            <p>
+              <label for="duedate"><h4>Date (required)</h4></label>
+              <input type="date" name="duedate" id="duedate" value="" size="22" />
+            </p>
+            <p>
+              <label for="description" style="display:none;"><h4>Description (required)</h4></label>
+              <textarea name="description" id="comments" rows="10"></textarea>
+            </p>
+            <p>
+              <input name="submit" type="submit" id="submit" value="Submit Form" />
+              &nbsp;
+              <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+            </p>
+          </form>
+         
+      </div>
+      
+     <div class="sidebar">
+
+        <div id="featured">
+          <ul>
+            <li>
+              <h5>Widget</h5>
+              <p><iframe width="220" height="350" src="https://maps.google.com.ph/maps?ie=UTF8&cid=10987794127946762048&q=UP+Information+Technology+Training+Center&iwloc=A&gl=PH&hl=en&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.ph/maps?ie=UTF8&cid=10987794127946762048&q=UP+Information+Technology+Training+Center&iwloc=A&gl=PH&hl=en&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+            </li>
+          </ul>
+        </div>
+       <div class="subnav">
+          <h5>Follow Us!</h5>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
+      
+      <div class="clear"></div>
+    </div>
+    
+ 
+ </div>
+<div class="main-container">
+ </div>
+ 
+<div class="callout"> 
+    <div class="calloutcontainer"> 
+        <div class="container_12"> 
+            <div class="grid"> 
+    
+            <div class="clear"></div> 
+        </div> 
+        <div class="calloutoverlay"></div> 
+        <div class="calloutoverlaybottom"></div> 
+    </div> 
+</div> </div> 
+{% endblock %}

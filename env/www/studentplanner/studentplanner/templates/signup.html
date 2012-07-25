@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-container">
+  <div class="container1">
+<br />
+<br />
+
+    <div class="box">
+           <div class="content">
+        <h1>New User</h1>
+<form action="#" method="post">
+<noscript>
+		<p><input type="hidden" name="nojs" id="nojs" /></p>
+</noscript>
+
+
+
+   <br />
+			<p>
+			<label for="userType"><h5>User Type: </h5></label>
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="userType" value="event" /><h6 style="display: inline;"> Individual</h6><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="userType" value="task" /><h6 style="display: inline;"> Organization</h6><br />
+			</p><br />
+            <p>
+              <label for="fname"><h5>First Name (required)</h5></label>
+              <input type="text" name="fname" id="name" value="" size="22" />
+            </p>
+			<p>
+              <label for="lname"><h5>Last Name (required)</h5></label>
+              <input type="text" name="lname" id="name" value="" size="22" />
+            </p>
+            <p>
+              <label for="bday"><h5>Birthday (required)</h5></label>
+              <input type="date" name="bday" id="bday" value="" size="22" />
+            </p>
+			<p>
+              <label for="school"><h5>University/College (required)</h5></label>
+              <input type="text" name="school" id="name" value="" size="22" />
+            </p>
+			<p>
+              <label for="organization"><h5>Organization </h5></label>
+              <input type="text" name="organization" id="name" value="" size="22" />
+            </p>
+			<p>
+              <label for="gmailAddr"><h5>GMail Address (required)</h5></label>
+              <input type="email" name="gmailAddr" id="name" value="" size="22" />
+            </p>
+			<p>
+              <label for="univMailAddr"><h5>University WebMail (required)</h5></label>
+              <input type="email" name="univMailAddr" id="name" value="" size="22" />
+            </p>
+            <p>
+              <input name="submit" type="submit" id="submit" value="Submit Form" />
+              &nbsp;
+              <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+            </p>
+          </form>
+         
+      </div>
+      
+     <div class="sidebar">
+
+        <div id="featured">
+          <ul>
+            <li>
+              <h5>Widget</h5>
+              <p><iframe width="220" height="350" src="https://maps.google.com.ph/maps?ie=UTF8&cid=10987794127946762048&q=UP+Information+Technology+Training+Center&iwloc=A&gl=PH&hl=en&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.ph/maps?ie=UTF8&cid=10987794127946762048&q=UP+Information+Technology+Training+Center&iwloc=A&gl=PH&hl=en&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+            </li>
+          </ul>
+        </div>
+       <div class="subnav">
+          <h5>Follow Us!</h5>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
+      
+      <div class="clear"></div>
+    </div>
+    
+ 
+ </div>
+<div class="main-container">
+ </div>
+ 
+<div class="callout"> 
+    <div class="calloutcontainer"> 
+        <div class="container_12"> 
+            <div class="grid"> 
+    
+            <div class="clear"></div> 
+        </div> 
+        <div class="calloutoverlay"></div> 
+        <div class="calloutoverlaybottom"></div> 
+    </div> 
+</div> </div> 
+
+{% endblock %}
