@@ -71,4 +71,6 @@ def show_reminders(request):
 def clear_done_tasks(request):
     return None
 def show_calendar(request):
+	#if request.user.is_authenticated() = True:
+		#tempUser = User.objects.get(username__exact = request.session['username'])
     return None

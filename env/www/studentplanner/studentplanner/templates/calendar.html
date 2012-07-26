@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
+<head>
+<script type="text/javascript" src="http://www.google.com/jsapi">
+	google.load("gdata", "1");
+	google.setOnLoadCallback(getMyFeed);
+</script>
+</head>
 <div class="main-container">
   <div class="container1">
   
 <br />
 <br />
-	<h1>Calendar here.</h1>
-    
-    
+	<h1><script>
+		var myService;
+		var feedUrl = "https://www.google.com/calendar/feeds/{{user}}/public/full";
+
+		function setupMyService() {
+			myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
+		}
+
+		function getMyFeed() {
+			setupMyService();
+
+			myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
+		}
+	</script>
+	</h1>
  </div>
  
 <div class="callout"> 
