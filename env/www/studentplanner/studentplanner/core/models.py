@@ -37,14 +37,6 @@ class UserAccount(models.Model):
     participating = models.ManyToManyField(Event, related_name="Participating")
     def __unicode__(self):
         return "%s"%username
-class Note(models.Model):
-    owner = models.ForeignKey(User, related_name='OwnerN')
-    note = models.CharField(max_length=50)
-    body = models.CharField(max_length=5000)
-    start= models.DateField(auto_now_add = True)
-    end= models.DateField()
-    def __unicode__(self):
-        return "%s"%note
 class Task(models.Model):
     owner = models.ForeignKey(User, related_name='OwnerT')
     task= models.CharField(max_length=100)

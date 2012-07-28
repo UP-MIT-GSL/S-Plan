@@ -17,14 +17,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', TemplateView.as_view(template_name="login.html"), name="login"),
-    url(r'^profile/$', TemplateView.as_view(template_name="profile.html"), name="profile"),
-    #url(r'^logout/$', TemplateView.as_view(template_name="logout.html"), name="logout"),
+    url(r'^$', views.login1, name="login"),
+    url(r'^profile/$', views.profile, name="profile"),
+    url(r'^logout/$', views.logout1, name="logout"),
     url(r'^calendar/$', TemplateView.as_view(template_name="calendar.html"), name="calendar"),
-    url(r'^tasks/$', TemplateView.as_view(template_name="tasks.html"), name="task"),
-    url(r'^reminders/$', TemplateView.as_view(template_name="reminders.html"), name="reminder"),
-    url(r'^events/$', TemplateView.as_view(template_name="events.html"), name="event"),
-    url(r'^home/$', TemplateView.as_view(template_name="user_home.html"), name="home"),
+    url(r'^tasks/$', views.show_tasks, name="task"),
+    url(r'^reminders/$',views.show_reminders, name="reminder"),
+    url(r'^events/$', views.show_events, name="event"),
+    url(r'^home/$', views.show_notes, name="home"),
     url(r'^contact/$', TemplateView.as_view(template_name="contact.html"), name="contact"),
 )
 

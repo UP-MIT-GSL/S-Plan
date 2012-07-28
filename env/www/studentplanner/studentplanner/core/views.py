@@ -50,7 +50,7 @@ def profile(request):
         return render_to_response('profile.html',{'tempUser':tempUser, 'useraccount':useraccount},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect(reverse('login'))    
-def show_task(request):
+def show_tasks(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username__exact = request.session['username'])
         task_list = Task.objects.filter(owner = tempUser)
@@ -68,8 +68,10 @@ def show_events(request):
 def show_notes(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username__exact = request.session['username'])
-        note_list = Note.objects.filter(owner = tempUser)
-        return render_to_response('tasks.html',{'task_list':task_list},context_instance=RequestContext(request))
+        task_list = Task.objects.filter(owner = tempUser)
+        event_list = Event.objects.filter(owner = tempUser)
+        reminder_list = Reminder.objects.filter(owner = tempUser)
+        return render_to_response('home.html',{'task_list':task_list, 'event_list':event_list, 'reminder_list': reminder_list},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect(reverse('login'))
 def show_reminders(request):
@@ -88,7 +90,7 @@ def clear_done_tasks(request):
             if a.isDone == False:
                 task_list2.append(a)
         return render_to_response('tasks.html',{'task_list2':task_list2},context_instance=RequestContext(request))
-    else
+    else:
         return HttpResponseRedirect(reverse('login'))    
 def show_calendar(request):
 	#if request.user.is_authenticated() = True:
