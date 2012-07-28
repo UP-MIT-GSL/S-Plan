@@ -29,7 +29,7 @@
   </div>
 </div>
 <div class="main-container">
-{% if user.isauthenicated  %}
+{% if user.is_authenticated %}
   <div id="nav-container">
    <nav> 
     <ul class="nav">
@@ -48,7 +48,7 @@
    </nav> 
     <div class="clear"></div>
   </div>
- (% endif %)
+{% endif %}
 </div>
 {% block content %}
 
