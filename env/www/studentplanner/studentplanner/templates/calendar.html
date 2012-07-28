@@ -4,6 +4,15 @@
 <script type="text/javascript" src="http://www.google.com/jsapi">
 	google.load("gdata", "1");
 	google.setOnLoadCallback(getMyFeed);
+	var myService;
+	var feedUrl = "https://www.google.com/calendar/feeds/ryunenflare@gmail.com/public/full";
+	function setupMyService() {
+		myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
+	}
+	function getMyFeed() {
+		setupMyService();
+		myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
+	}
 </script>
 </head>
 <div class="main-container">
@@ -12,18 +21,7 @@
 <br />
 <br />
 	<h1><script>
-		var myService;
-		var feedUrl = "https://www.google.com/calendar/feeds/{{user}}/public/full";
 
-		function setupMyService() {
-			myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
-		}
-
-		function getMyFeed() {
-			setupMyService();
-
-			myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
-		}
 	</script>
 	</h1>
  </div>
