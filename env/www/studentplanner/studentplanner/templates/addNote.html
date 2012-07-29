@@ -19,9 +19,9 @@
 			<p>
             <label for="noteType"><h5>Entry Type: </h5></label>
 			<br /><br />
-			<a href="addEvent.html" name="noteType" class="more" target="_blank">Event</a>
-			<a href="addTask.html" name="noteType" class="more" target="_blank">Task</a>
-			<a href="addReminder.html" name="noteType" class="more" target="_blank">Reminder</a><br />
+			<a href="{% url addevent %}" name="noteType" class="more" target="_blank">Event</a>
+			<a href="{% url addtask %}" name="noteType" class="more" target="_blank">Task</a>
+			<a href="{% url addreminder %}" name="noteType" class="more" target="_blank">Reminder</a><br />
 			</p>
           </form>
          
