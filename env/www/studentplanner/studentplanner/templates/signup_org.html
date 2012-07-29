@@ -16,12 +16,37 @@
 
 
    <br />
+            <p>
+              <label for="orgname"><h5>Organization Name (required)</h5></label>
+              <input type="text" name="orgname" id="name" value="" size="22" />
+            </p>
 			<p>
-            <label for="userType"><h5>Sign Up as: </h5></label>
-			<br /><br />
-			<a href="signup_user.html" name="userType" class="more" target="_blank">Individual User</a>
-			<a href="signup_org.html" name="userType" class="more" target="_blank">Organization</a><br />
-			</p>
+              <label for="orgtype"><h5>Organization Type (required)</h5></label>
+			  {% for orgtype in orgtype_list %}
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="orgtype" value="{{ orgtype }}" /><h6 style="display: inline;"> {{ orgtype }}</h6><br />
+			{% endfor %}
+            </p>
+			<p>
+              <label for="orghead"><h5>Head (required)</h5></label>
+              <input type="text" name="orghead" id="name" value="" size="22" />
+            </p>
+			<p>
+              <label for="orgadd"><h5>Address: </h5></label>
+              <input type="text" name="orgadd" id="name" value="" size="22" />
+            </p>
+			<!-- <p>
+              <label for="organization"><h5>Organization </h5></label>
+              <input type="text" name="organization" id="name" value="" size="50" />
+            </p> -->
+			<p>
+              <label for="orgGmailAddr"><h5>GMail Address (required)</h5></label>
+              <input type="email" name="orgGmailAddr" id="name" value="" size="22" />
+            </p>
+            <p>
+              <input name="submit" type="submit" id="submit" value="Submit Form" />
+              &nbsp;
+              <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+            </p>
           </form>
          
       </div>
@@ -67,5 +92,4 @@
         <div class="calloutoverlaybottom"></div> 
     </div> 
 </div> </div> 
-
 {% endblock %}

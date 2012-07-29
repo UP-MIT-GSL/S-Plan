@@ -17,29 +17,12 @@
 
    <br />
 			<p>
-			<label for="noteType"><h4>Note Type: </h4></label>
-			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="event" /><h6 style="display: inline;"> Event</h6><br />
-			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="task" /><h6 style="display: inline;"> Task</h6><br />
-			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="reminder" /><h6 style="display: inline;"> Reminder</h6><br />
-			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="noteType" value="plainNote" /><h6 style="display: inline;"> Other</h6><br />
-			</p><br />
-            <p>
-              <label for="name"><h4>Title (required)</h4></label>
-              <input type="text" name="name" id="name" value="" size="22" />
-            </p>
-            <p>
-              <label for="duedate"><h4>Date (required)</h4></label>
-              <input type="date" name="duedate" id="duedate" value="" size="22" />
-            </p>
-            <p>
-              <label for="description" style="display:none;"><h4>Description (required)</h4></label>
-              <textarea name="description" id="comments" rows="10"></textarea>
-            </p>
-            <p>
-              <input name="submit" type="submit" id="submit" value="Submit Form" />
-              &nbsp;
-              <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
-            </p>
+            <label for="noteType"><h5>Entry Type: </h5></label>
+			<br /><br />
+			<a href="addEvent.html" name="noteType" class="more" target="_blank">Event</a>
+			<a href="addTask.html" name="noteType" class="more" target="_blank">Task</a>
+			<a href="addReminder.html" name="noteType" class="more" target="_blank">Reminder</a><br />
+			</p>
           </form>
          
       </div>

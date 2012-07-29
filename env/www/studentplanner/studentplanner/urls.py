@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^events/$', views.show_events, name="event"),
     url(r'^home/$', views.show_notes, name="home"),
     url(r'^contact/$', TemplateView.as_view(template_name="contact.html"), name="contact"),
+	url(r'^signup/$', TemplateView.as_view(template_name="signup.html"), name="signup")
 )
 
 if settings.DEBUG:

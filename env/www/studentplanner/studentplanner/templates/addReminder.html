@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block content %}
+{% blcok content %}
 <div class="main-container">
   <div class="container1">
 <br />
@@ -7,7 +7,7 @@
 
     <div class="box">
            <div class="content">
-        <h1>New User</h1>
+        <h1>Add New Note</h1>
 <form action="#" method="post">
 <noscript>
 		<p><input type="hidden" name="nojs" id="nojs" /></p>
@@ -16,12 +16,19 @@
 
 
    <br />
-			<p>
-            <label for="userType"><h5>Sign Up as: </h5></label>
-			<br /><br />
-			<a href="signup_user.html" name="userType" class="more" target="_blank">Individual User</a>
-			<a href="signup_org.html" name="userType" class="more" target="_blank">Organization</a><br />
-			</p>
+            <p>
+              <label for="reminder"><h4>Reminder </h4></label>
+              <input type="text" name="reminder" id="name" value="" size="35" />
+            </p>
+            <p>
+              <label for="occurrence"><h4>Occurrence </h4></label>
+              <input type="date" name="occurrence" id="duedate" value="" size="22" />
+            </p>
+            <p>
+              <input name="submit" type="submit" id="submit" value="Submit Form" />
+              &nbsp;
+              <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+            </p>
           </form>
          
       </div>
@@ -60,12 +67,11 @@
     <div class="calloutcontainer"> 
         <div class="container_12"> 
             <div class="grid"> 
-    
+                 
             <div class="clear"></div> 
         </div> 
         <div class="calloutoverlay"></div> 
         <div class="calloutoverlaybottom"></div> 
     </div> 
 </div> </div> 
-
 {% endblock %}
