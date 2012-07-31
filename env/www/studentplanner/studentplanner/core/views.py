@@ -1,4 +1,3 @@
-# Create your views here.
 from django.contrib.auth.models import User
 from studentplanner.core.models import *
 from django.core.urlresolvers import reverse
@@ -19,20 +18,23 @@ def login1(request):
         context_instance.update(csrf(request))
         username = password = ''
         if request.method== "POST":
-            username = request.POST['username']
-            password = request.POST['password']
-            user= authenticate(username=username, password=password)
-            if user is not None:
-                if user.is_active:
-                    login(request,user)
-                    request.session['username']=username            
-                    return HttpResponseRedirect(reverse('home'))
+            if 'username' in request.POST:
+                username = request.POST['username']
+                password = request.POST['password']
+                user= authenticate(username=username, password=password)
+                if user is not None:
+                    if user.is_active:
+                        login(request,user)
+                        request.session['username']=username          
+                        return HttpResponseRedirect('/home')
+                else:
+                    return HttpResponseRedirect('/login')
             else:
-                return HttpResponseRedirect(reverse('login'))
+                    return HttpResponseRedirect('/login')
         else:
             return render_to_response('login.html',{'username':username},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('home'))
+        return HttpResponseRedirect('/home')
 def logout1(request):
     if request.user.is_authenticated()==True:
         try:
@@ -40,18 +42,18 @@ def logout1(request):
             del request.session['user_id']
         except KeyError:
             pass
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
     else:
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
 def profile(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username= request.session['username'])
-        useraccount = OrgAccount.objects.get(User = tempUser)
+        useraccount = OrgAccount.objects.get(orgname = tempUser)
         if useraccount == None:
-            useraccount = UserAccount.objects.get(User = tempUser) 
+            useraccount = UserAccount.objects.get(username = tempUser) 
         return render_to_response('profile.html',{'tempUser':tempUser, 'useraccount':useraccount},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))    
+        return HttpResponseRedirect('/login')    
 def show_tasks(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
@@ -59,30 +61,30 @@ def show_tasks(request):
         clear_done_tasks(request)
         return render_to_response('tasks.html',{'task_list':task_list},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
 def show_events(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
         event_list = Event.objects.filter(owner = tempUser)
         return render_to_response('events.html',{'event_list':event_list},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
 def show_notes(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
         task_list = Task.objects.filter(owner = tempUser)
         event_list = Event.objects.filter(owner = tempUser)
         reminder_list = Reminder.objects.filter(owner = tempUser)
-        return render_to_response('home.html',{'task_list':task_list, 'event_list':event_list, 'reminder_list': reminder_list},context_instance=RequestContext(request))
+        return render_to_response('user_home.html',{'task_list':task_list, 'event_list':event_list, 'reminder_list': reminder_list},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
 def show_reminders(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
         reminder_list = Reminder.objects.filter(owner = tempUser)
         return render_to_response('reminders.html',{'reminder_list':reminder_list},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))
+        return HttpResponseRedirect('/login')
 def clear_done_tasks(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
@@ -93,6 +95,6 @@ def clear_done_tasks(request):
                 task_list2.append(a)
         return render_to_response('tasks.html',{'task_list2':task_list2},context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect(reverse('login'))    
+        return HttpResponseRedirect('/login')    
 def show_calendar(request):
     return None
