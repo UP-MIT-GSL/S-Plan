@@ -8,6 +8,11 @@ from django.core.context_processors import csrf
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
+def sigup_user(request):
+	firstname = lastname = birthday = university = organization = gmail = webmail = ''
+	firstname = request.POST['firstname']
+	
+	
 def login1(request):
     if request.user.is_authenticated()==False:
         context_instance={}
@@ -90,6 +95,4 @@ def clear_done_tasks(request):
     else:
         return HttpResponseRedirect(reverse('login'))    
 def show_calendar(request):
-	#if request.user.is_authenticated() = True:
-		#tempUser = User.objects.get(username__exact = request.session['username'])
     return None
