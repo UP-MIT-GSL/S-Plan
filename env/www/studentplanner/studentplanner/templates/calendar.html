@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <head>
+<link rel="stylesheet" href="{{ STATIC_URL }}styles/calendar.css" type="text/css">
 <script type="text/javascript" src="http://www.google.com/jsapi">
 	google.load("gdata", "1");
 	google.setOnLoadCallback(getMyFeed);
@@ -26,27 +27,389 @@
 	}
 </script>
 </head>
+
 <div class="main-container">
   <div class="container1">
   
 <br />
 <br />
-	<h1><script>
+    <div class="Calendar">
 
-	</script>
-	</h1>
+<div class=PageTitle><h1>Your Calendar</h1></div>
+
+
+
+<center>
+
+<!--<table class=ActionBar cellspacing=5 cellpadding=2 color=white border=0><tr>
+
+<td ><a align=right alt="Calendar"  href="Calendar.html" border=0 > <img src="cal.gif" border=0> &nbsp;<u>Calendar</u>&nbsp;</a></td>
+
+<td ><a align=right alt="Year"  href="Year.html" border=0 ><img src="year.gif" border=0> &nbsp;Year&nbsp;</a></td>
+
+<td ><a align=right alt="List View"  href="EventList2012.html" border=0 > <img src="list.gif" border=0> &nbsp;List&nbsp;</a></td>
+
+<td><a href="javascript:print()"><img src="print.gif" border=0> &nbsp;Print&nbsp;</a></td>
+
+<td><a href="rss.xml"  target="_blank"  ><img src="rss.gif" border=0> &nbsp;RSS&nbsp;</a></td>
+
+
+
+<td></td>
+
+</tr></table>-->
+
+<div><i class=DontPrint ><a href="calendar.cal" > </a></i></div>
+
+</center>
+
+
+
+<div class=NavMenu  ><center><div id="header"><ul><li><a href=April2012.html>Apr</a></li><li><a href=May2012.html>May</a></li><li><a href=June2012.html>Jun</a></li><li><a href=July2012.html>Jul</a></li><li id="current"><a href=August2012.html>Aug</a></li><li><a href=September2012.html>Sep</a></li><li><a href=October2012.html>Oct</a></li><li><a href=November2012.html>Nov</a></li><li><a href=December2012.html>Dec</a></li></ul></div></center></div> <div style="clear:both;"></div>
+
+
+<a name=August></a>
+
+
+<div class=Canvas >
+<table class=calendar  cellspacing="0" >
+<caption class=monthcaption  > August 2012</caption>
+
+<th  width=14% class="Weekdays">Sun</th>
+<th  width=14% class="Weekdays">Mon</th>
+<th  width=14% class="Weekdays">Tue</th>
+<th  width=14% class="Weekdays">Wed</th>
+<th  width=14% class="Weekdays">Thu</th>
+<th  width=14% class="Weekdays">Fri</th>
+<th  width=14% class="Weekdays">Sat</th>
+
+<tr class="events">
+
+<td valign="top"  class="events" Style="background-color:#F0F0F0;" >
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" Style="background-color:#F0F0F0;" >
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" Style="background-color:#F0F0F0;" >
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D1"  target="_top"  ><div class="Date" >1<br /></div></a>
+
+<a class="itr"  href=EventList2012.html#M8D1 ><b>CS 133 Exam</b><br clear=all><span class="dt" >11:30 am
+
+</span><br /><span class="bpop" style="left:-6em; width:14em; top:4.5em; "><center><font size=+1>CS 133 Exam</font></center><br><center><img border=0 src="{{ STATIC_URL }}images/automata.png" ></center><br clear=all></span></a>
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D2"  target="_top"  ><div class="Date" >2<br /></div></a>
+<a class="itr" style="display: block;   background-color:#FFFFD5;  font-family:Arial;  color:#008040;  Font-Size:8pt; text-decoration: none; " href=EventList2012.html#M8D3 ><b>CS 172 Proj. Presentation</b><br clear=all><span class="dt" >4:00 pm
+
+</span><br /><span class="bpop" style="left:-15em; width:22em; top:4.5em; "><center><font size=+1>CS 172</font></center><br><center><img border=0 src="{{ STATIC_URL }}images/mit_aiti-twitter-logo.png" ></center><br clear=all><span class="dt" >4:00 pm<br /></span><br /><br />Project Demo of CS 172 Apps<br /></span></a>
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D3"  target="_top"  ><div class="Date" >3<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D4"  target="_top"  ><div class="Date" >4<br /></div></a>
+<a class="itr" style="display: block;   background-color:#FFFFD5;  font-family:Arial;  color:#008040;  Font-Size:8pt; text-decoration: none; " href=EventList2012.html#M8D3 ><b>Google DevFest</b><br clear=all><span class="dt" >7:00 am
+
+</span><br /><span class="bpop" style="left:-15em; width:22em; top:4.5em; "><center><font size=+1>Google DevFest</font></center><br><center><img border=0 src="{{ STATIC_URL }}images/gdg.png" ></center><br clear=all><span class="dt" >7:00 am<br /></span><br /><br /></span></a>
+<br />
+
+</td>
+
+</tr><tr>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D5"  target="_top"  ><div class="Date" >5<br /></div></a>
+
+<a class="itr"  href=EventList2012.html#M8D5 ><b>Study CS180</b><br clear=all><span class="dt" >9:00 am
+
+</span><br /><span class="bpop" style="left:-0em; width:14em; top:4.5em; "><center><font size=+1>CS 180 Study</font></center><br><center><img border=0 src="{{ STATIC_URL }}images/books.png" ></center><br clear=all></span></a>
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D6"  target="_top"  ><div class="Date" >6<br /></div></a>
+
+<br /><br />
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D7"  target="_top"  ><div class="Date" >7<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D8"  target="_top"  ><div class="Date" >8<br /></div></a>
+<br /><br />
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D9"  target="_top"  ><div class="Date" >9<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D10"  target="_top"  ><div class="Date" >10<br /></div></a>
+
+<a class="itr" style="display: block;   background-color:#FFFFD5;  font-family:Arial;  color:#008040;  Font-Size:8pt; text-decoration: none; " href=EventList2012.html#M8D17 ><b>Akwe</b><br clear=all><span class="dt" >6:00 pm
+
+</span><br /><span class="bpop" style="left:-15em; width:22em; top:4.5em; "><center><font size=+1>Akwe</font></center><br><center><img border=0 src="{{ STATIC_URL }}images/partyhat.png" ></center><br clear=all><span class="dt" >6:00 pm<br /></span><br /><br />Kids' Party themed Akwe<br /></span></a>
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D11"  target="_top"  ><div class="Date" >11<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+</tr><tr>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D12"  target="_top"  ><div class="Date" >12<br /></div></a>
+<br / ><br />
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D13"  target="_top"  ><div class="Date" >13<br /></div></a>
+
+
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D14"  target="_top"  ><div class="Date" >14<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D15"  target="_top"  ><div class="Date" >15<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D16"  target="_top"  ><div class="Date" >16<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D17"  target="_top"  ><div class="Date" >17<br /></div></a>
+
+<br /><br />
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D18"  target="_top"  ><div class="Date" >18<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+</tr><tr>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D19"  target="_top"  ><div class="Date" >19<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D20"  target="_top"  ><div class="Date" >20<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D21"  target="_top"  ><div class="Date" >21<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D22"  target="_top"  ><div class="Date" >22<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D23"  target="_top"  ><div class="Date" >23<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D24"  target="_top"  ><div class="Date" >24<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D25"  target="_top"  ><div class="Date" >25<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+</tr><tr>
+
+<td valign="top"  class="events" id="this" Style="background-color:#F8FFF0;" > 
+
+<a href="EventList2012.html#M8D26"  target="_top"  ><div class="Date" >26<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D27"  target="_top"  ><div class="Date" >27<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D28"  target="_top"  ><div class="Date" >28<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D29"  target="_top"  ><div class="Date" >29<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D30"  target="_top"  ><div class="Date" >30<br /></div></a>
+
+<br /><br /><br />
+
+</td>
+
+<td valign="top"  class="events" id="this"  > 
+
+<a href="EventList2012.html#M8D31"  target="_top"  ><div class="Date" >31<br /></div></a>
+
+
+<br />
+
+</td>
+
+<td valign="top"  colspan=1 class="events" Style="background-color:#F0F0F0;" ></td>
+
+</tr></table></div>
+
+
+
+
+
+
+
+<div class="updated" ><i class=DontPrint >Updated Wednesday, April 18, 2012</i></div>
+
+
+
+</div>
+
+    
  </div>
  
 <div class="callout"> 
     <div class="calloutcontainer"> 
         <div class="container_12"> 
             <div class="grid"> 
-                <div class="alignleft">
-				<!-- article class footbox and foot-box-last for two columns -->
-                    <h3>Event: <i>noteName</i></h3> 
-                    <p>event details</p> 
-                </div> 
-        <a href="addNote.html" class="more" target="_blank">Add Note</a>
             </div> 
             <div class="clear"></div> 
         </div> 
