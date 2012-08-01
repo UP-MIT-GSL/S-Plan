@@ -9,14 +9,14 @@
     <div class="box">
         <p><div>
           <div id="header1">
-    <h1><a href="user_home.html">{{ orgname }}</a></h1>
-    <p id="tagline1"><strong>{{ user_type }}</strong></p>
+    <h1><a href="user_home.html">{{ useraccount.orgname }}</a></h1>
+    <!--<p id="tagline1"><strong>{{ user_type }}</strong></p>-->
   </div><br /><br />
-        <span><h5>Organization Name: </h5> {{ orgname }}</span>
-		<span><h5>Type: </h5> {{ orgtype }}</span>
-		<span><h5>Head: </h5> {{ orghead }}</span>
-		<span><h5>Address: </h5> {{ orgadd }}</span>
-		<span><h5>GMail Address: </h5> {{ orgGmailAddr }}</span>
+        <span><h5>Organization Name: </h5> {{ useraccount.orgname }}</span>
+		<span><h5>Type: </h5> {{ useraccount.orgType }}</span>
+		<span><h5>Head: </h5> {{ useraccount.orgHead }}</span>
+		<span><h5>Address: </h5> {{ useraccount.orgAdd }}</span>
+		<span><h5>GMail Address: </h5> {{ tempUser.email }}</span>
 </div>
     <br />
     <div class="clear"></div>

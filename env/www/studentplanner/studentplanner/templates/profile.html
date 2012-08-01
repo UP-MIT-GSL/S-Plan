@@ -9,14 +9,14 @@
     <div class="box">
         <p><div>
           <div id="header1">
-    <h1><a href="user_home.html">{{ fname }}</a></h1>
-    <p id="tagline1"><strong>{{ user_type }}</strong></p>
+    <h1><a href="user_home.html">{{ useraccount.username }}</a></h1>
+    <!--<p id="tagline1"><strong>{{ user_type }}</strong></p>-->
   </div><br /><br />
-        <span><h5>First Name: </h5> {{ fname }}</span>
-		<span><h5>Last Name: </h5> {{ lname }}</span>
-		<span><h5>Birthday: </h5> {{ bday }}</span>
-		<span><h5>University or College: </h5> {{ school }}</span>
-		<span><h5>Organization/s: </h5> {{ organization }}</span>
+        <span><h5>First Name: </h5> {{ tempUser.first_name }}</span>
+		<span><h5>Last Name: </h5> {{ tempUser.last_name }}</span>
+		<span><h5>Birthday: </h5> {{ useraccount.birthday }}</span>
+		<span><h5>University or College: </h5> {{ useraccount.university }}</span>
+		<span><h5>Organization/s: </h5> {{ useraccount.organization }}</span>
 </div>
     <br />
     <div class="clear"></div>

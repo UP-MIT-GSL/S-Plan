@@ -80,15 +80,16 @@ def profile(request):
         tempUser = User.objects.get(username= request.session['username'])
         useraccount = OrgAccount.objects.get(orgname = tempUser)
         if useraccount == None:
-            useraccount = UserAccount.objects.get(username = tempUser) 
-        return render_to_response('profile.html',{'tempUser':tempUser, 'useraccount':useraccount},context_instance=RequestContext(request))
+            useraccount = UserAccount.objects.get(username = tempUser)
+            return render_to_response('profile.html',{'tempUser':tempUser, 'useraccount':useraccount},context_instance=RequestContext(request)) 
+        return render_to_response('profile_org.html',{'tempUser':tempUser, 'useraccount':useraccount},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/login')    
 def show_tasks(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
         task_list = Task.objects.filter(owner = tempUser)
-        clear_done_tasks(request)
+        #clear_done_tasks(request)
         return render_to_response('tasks.html',{'task_list':task_list},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/login')

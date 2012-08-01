@@ -93,7 +93,7 @@ SECRET_KEY = 'o@r7-h=#ch_1=*x4!o12%tmw%+m5+(ok=tnif1t#81a@%n3@tm'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+#     'django.template.loaders. eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -131,6 +131,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 60 * 60
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

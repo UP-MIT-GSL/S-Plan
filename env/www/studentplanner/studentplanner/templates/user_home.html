@@ -8,32 +8,32 @@
                 <article class="box" id="home_featured21">
               <div class="block"><h2>Events</h2>
 	          <br /><br />
-                <ul id="list">
+                <ul id="list"  style="font-size: 18px">
                 {% for event in event_list %}
 			        <li>{{ event }}</li>
 		        {% endfor %}
                 </ul>
-		        <a href="events.html" class="read_more">See Events</a> 
+		        <a href="{% url event %}" class="read_more">See Events</a> 
 
               </div>
               <div class="block"><h2>Tasks</h2>
         <br /><br />
-                <ul id="list">
+                <ul id="list"  style="font-size: 18px">
                 {% for task in task_list %}
 			        <li>{{ task }}</li>
 		        {% endfor %}
                 </ul>
 	
-		        <a href="tasks.html" class="read_more">See Tasks</a>
+		        <a href="{% url task %}" class="read_more">See Tasks</a>
               </div>
               <div class="block last"><h2>Reminders</h2>
 	          <br /><br />
-                <ul id="list">
-                {% for rem in rem_list %}
+                <ul id="list"  style="font-size: 18px">
+                {% for rem in reminder_list %}
 			        <li>{{ rem }}</li>
 		        {% endfor %}
                 </ul>
-		        <a href="reminders.html" class="read_more">See Reminders</a>
+		        <a href="{% url reminder %}" class="read_more">See Reminders</a>
               </div>
               <div class="clear"></div>
             </article>
