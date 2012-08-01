@@ -11,6 +11,7 @@
            <div class="content">
         <h1>Add New Task</h1>
 <form action="{% url success %}" method="post">
+	{% csrf_token %}
 <noscript>
 		<p><input type="hidden" name="nojs" id="nojs" /></p>
 </noscript>
