@@ -34,6 +34,7 @@ urlpatterns = patterns('',
 	url(r'^addEvent/$', TemplateView.as_view(template_name="addEvent.html"), name="addevent"),
 	url(r'^addTask/$', TemplateView.as_view(template_name="addTask.html"), name="addtask"),
 	url(r'^addReminder/$', TemplateView.as_view(template_name="addReminder.html"), name="addreminder"),
+	url(r'^success/$', TemplateView.as_view(template_name="success.html"), name="success"),
 )
 
 if settings.DEBUG:
