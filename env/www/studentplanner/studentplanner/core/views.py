@@ -53,7 +53,7 @@ def show_tasks(request):
     if request.user.is_authenticated() == True:
         tempUser = User.objects.get(username = request.session['username'])
         task_list = Task.objects.filter(owner = tempUser)
-        clear_done_tasks(request)
+        #clear_done_tasks(request)
         return render_to_response('tasks.html',{'task_list':task_list},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/login')
