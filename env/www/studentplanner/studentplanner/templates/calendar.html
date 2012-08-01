@@ -13,6 +13,17 @@
 		setupMyService();
 		myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
 	}
+	function logMeIn() {
+		scope = "https://www.google.com/calendar/feeds/";
+		var token = google.accounts.user.login(scope);
+	}
+	function setupMyService() {
+		myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
+		logMeIn();
+	}
+	function logMeOut() {
+		google.accounts.user.logout();
+	}
 </script>
 </head>
 <div class="main-container">
