@@ -7,10 +7,40 @@ from django.core.context_processors import csrf
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
+@csrf_exempt
 def sigup_user(request):
-	firstname = lastname = birthday = university = organization = gmail = webmail = ''
-	firstname = request.POST['firstname']
-	
+	firstname = lastname = birthday = school = organization = gmail = webmail = ''
+    
+	if 'fname' in request.POST:
+		firstname = request.POST['fname']
+	if 'lname' in request.POST:
+		lastname = request.POST['lname']
+	if 'bday' in request.POST:
+		birthday = request.POST['bday']
+	if 'school' in request.POST:
+		school = request.POST['school']
+	if 'organization' in request.POST:
+		organization = request.POST['organization']
+	if 'gmailAddr' in request.POST:
+		gmail = request.POST['gmailAddr']
+	if 'univMailAddr' in request.POST:
+		webmail = request.POST['univMailAddr']
+	#add to the database.
+@csrf_exempt
+def sigup_org(request):
+	orgname = orgtype = orghead = orgadd = orgGmailAddr = ''
+    
+	if 'orgname' in request.POST:
+		orgname = request.POST['orgname']
+	if 'orgtype' in request.POST:
+		orgtype = request.POST['orgtype']
+	if 'orghead' in request.POST:
+		orghead = request.POST['orghead']
+	if 'orgadd' in request.POST:
+		orgadd = request.POST['orgadd']
+	if 'orgGmailAddr' in request.POST:
+		orgGmailAddr = request.POST['orgGmailAddr']
+	#add to the database.
 	
 def login1(request):
     if request.user.is_authenticated()==False:
