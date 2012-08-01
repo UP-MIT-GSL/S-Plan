@@ -6,6 +6,7 @@ from django.template import RequestContext
 from django.core.context_processors import csrf
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
+from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def sigup_user(request):
@@ -29,7 +30,6 @@ def sigup_user(request):
 @csrf_exempt
 def sigup_org(request):
 	orgname = orgtype = orghead = orgadd = orgGmailAddr = ''
-    
 	if 'orgname' in request.POST:
 		orgname = request.POST['orgname']
 	if 'orgtype' in request.POST:
