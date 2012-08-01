@@ -160,6 +160,10 @@ input[type=submit],input[type=reset]{	background: #333;background: -moz-linear-g
 
 input[type=submit]:hover,input[type=reset]:hover{border-radius:0 10px 0 10px;color:#fff;opacity:1}
 
+input  #login-btn{
+	background: url(../images/login-btn.png) no repeat top left;
+}
+
 .date{float:left;position:relative;margin-right:10px;padding:45px 5px 0}
 .date .month{text-transform:uppercase;font-size:25px}.date .day{font-size:35px;line-height:45px;position:absolute;left:5px;top:0}
 .date .year{display:block;position:absolute;right:-5px;top:15px;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg)}
