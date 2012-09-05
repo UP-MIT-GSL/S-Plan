@@ -129,3 +129,5 @@ def clear_done_tasks(request):
         return HttpResponseRedirect('/login')    
 def show_calendar(request):
     return None
+def success(request):
+    return render_to_response('success.html',{},context_instance=RequestContext(request))
